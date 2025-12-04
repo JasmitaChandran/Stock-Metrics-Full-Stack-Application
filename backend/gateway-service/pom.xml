@@ -18,12 +18,19 @@
 
     <dependencies>
 
+        <!-- Spring Cloud Gateway, reactive stack (Boot 4 + Cloud Oakwood) -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
         </dependency>
 
-        <!-- Security (Keycloak added later) -->
+        <!-- OAuth2 Resource Server for JWT validation (Keycloak) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        </dependency>
+
+        <!-- Security (basic config) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
