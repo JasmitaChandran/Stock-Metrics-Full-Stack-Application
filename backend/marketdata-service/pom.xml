@@ -14,14 +14,26 @@
 
     <artifactId>marketdata-service</artifactId>
     <name>marketdata-service</name>
-    <description>Market data ingestion service</description>
+    <description>Market data service</description>
 
     <dependencies>
 
-        <!-- Reactive WebFlux (required for streaming) -->
+        <!-- Reactive web stack -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <!-- Reactive MongoDB for historical data -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+        </dependency>
+
+        <!-- Kafka for publishing price events -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
 
         <!-- Actuator -->
@@ -30,7 +42,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- Lombok (optional but recommended) -->
+        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
